@@ -323,21 +323,21 @@ export const IntegrationMarketplace = () => {
                     </div>
 
                     <div className="flex gap-2 pt-4 border-t border-secondary">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => window.open(integration.documentationUrl, '_blank')}
-                        className="flex-1"
-                      >
-                        <ExternalLink className="h-3 w-3 mr-1" />
-                        Docs
+                      <Button asChild variant="outline" size="sm" className="flex-1">
+                        <a href={integration.documentationUrl} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="h-3 w-3 mr-1" />
+                          Docs
+                        </a>
                       </Button>
-                      <Button
-                        size="sm"
-                        onClick={() => handleInstall(integration)}
-                        className="flex-1"
-                      >
-                        Install
+                      <Button asChild size="sm" className="flex-1">
+                        <a
+                          href={integration.installUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => toast({ title: "Redirecting...", description: `Opening ${integration.name} installation page` })}
+                        >
+                          Install
+                        </a>
                       </Button>
                     </div>
                   </CardContent>
@@ -406,21 +406,21 @@ export const IntegrationMarketplace = () => {
                       </div>
 
                       <div className="flex gap-2">
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          onClick={() => window.open(integration.documentationUrl, '_blank')}
-                          className="flex-1"
-                        >
-                          <ExternalLink className="h-3 w-3 mr-1" />
-                          Learn More
+                        <Button asChild variant="outline" size="sm" className="flex-1">
+                          <a href={integration.documentationUrl} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="h-3 w-3 mr-1" />
+                            Learn More
+                          </a>
                         </Button>
-                        <Button
-                          size="sm"
-                          onClick={() => handleInstall(integration)}
-                          className="flex-1"
-                        >
-                          Install
+                        <Button asChild size="sm" className="flex-1">
+                          <a
+                            href={integration.installUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => toast({ title: "Redirecting...", description: `Opening ${integration.name} installation page` })}
+                          >
+                            Install
+                          </a>
                         </Button>
                       </div>
                     </CardContent>

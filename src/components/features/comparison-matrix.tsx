@@ -262,15 +262,19 @@ export const ComparisonMatrix = () => {
                                     {tool?.price}
                                   </Badge>
                                 </div>
-                                <Button
-                                  variant="outline"
-                                  size="sm"
-                                  className="mt-3"
-                                  onClick={() => window.open(tool?.url, '_blank')}
-                                >
-                                  <ExternalLink className="h-3 w-3 mr-1" />
-                                  Visit
-                                </Button>
+                {tool?.url ? (
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="sm"
+                    className="mt-3"
+                  >
+                    <a href={tool.url} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="h-3 w-3 mr-1" />
+                      Visit
+                    </a>
+                  </Button>
+                ) : null}
                               </div>
                             );
                           })}
