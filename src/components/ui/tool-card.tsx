@@ -27,19 +27,9 @@ export const ToolCard = ({
   tags = [],
   monthlyVisits
 }: ToolCardProps) => {
-  const handleClick = (e?: React.MouseEvent) => {
-    if (e) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
-    if (url) {
-      window.open(url, '_blank', 'noopener,noreferrer');
-    }
-  };
 
   return (
-    <Card className="group gradient-card border-secondary hover:border-primary/50 transition-smooth shadow-card hover:shadow-glow cursor-pointer"
-          onClick={() => handleClick()}>
+    <Card className="group gradient-card border-secondary hover:border-primary/50 transition-smooth shadow-card hover:shadow-glow cursor-pointer">
       <CardHeader className="space-y-3">
         <div className="flex items-start justify-between">
           <div className="w-12 h-12 rounded-lg bg-gradient-hero flex items-center justify-center text-white font-bold text-lg animate-float">
@@ -60,7 +50,13 @@ export const ToolCard = ({
         </div>
         <div>
           <CardTitle className="text-lg text-foreground group-hover:text-primary transition-smooth line-clamp-1">
-            {name}
+            {url ? (
+              <a href={url} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="hover:underline">
+                {name}
+              </a>
+            ) : (
+              name
+            )}
           </CardTitle>
           <div className="flex items-center gap-2 mt-2 flex-wrap">
             <Badge variant="secondary" className="text-xs">
@@ -109,15 +105,29 @@ export const ToolCard = ({
           </Button>
         </RatingDialog>
         
-        <Button 
-          variant="default" 
-          size="sm" 
-          className="flex-1 gradient-button shadow-button hover:shadow-button hover:scale-105 transition-smooth"
-          onClick={handleClick}
-        >
-          <ExternalLink className="h-4 w-4 mr-2" />
-          Visit
-        </Button>
+{url ? (
+          <Button 
+            asChild
+            variant="default" 
+            size="sm" 
+            className="flex-1 gradient-button shadow-button hover:shadow-button hover:scale-105 transition-smooth"
+          >
+            <a href={url} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+              <ExternalLink className="h-4 w-4 mr-2" />
+              Visit
+            </a>
+          </Button>
+        ) : (
+          <Button 
+            variant="default" 
+            size="sm" 
+            className="flex-1 gradient-button shadow-button hover:shadow-button hover:scale-105 transition-smooth"
+            disabled
+          >
+            <ExternalLink className="h-4 w-4 mr-2" />
+            Visit
+          </Button>
+        )}
       </CardFooter>
     </Card>
   );
