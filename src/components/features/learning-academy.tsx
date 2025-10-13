@@ -35,6 +35,7 @@ interface Tutorial {
   views: string;
   rating: number;
   tags: string[];
+  url: string;
 }
 
 const courses: Course[] = [
@@ -145,47 +146,183 @@ const courses: Course[] = [
 const tutorials: Tutorial[] = [
   {
     id: "1",
-    title: "Getting Started with ChatGPT: Your First Conversation",
-    description: "Learn the basics of interacting with ChatGPT and getting useful responses.",
-    category: "Beginner",
-    duration: "15 min",
+    title: "Best AI Tools — The Ultimate Guide to Using AI",
+    description: "Comprehensive guide covering the best AI tools available and how to use them effectively.",
+    category: "General",
+    duration: "45 min",
     difficulty: "Easy",
-    views: "125K",
-    rating: 4.7,
-    tags: ["chatgpt", "beginner", "basics"]
+    views: "850K",
+    rating: 4.8,
+    tags: ["ai-tools", "guide", "beginner"],
+    url: "https://www.youtube.com/watch?v=bkftw_qw8lQ"
   },
   {
     id: "2",
-    title: "10 Midjourney Prompts That Will Blow Your Mind",
-    description: "Discover powerful prompting techniques for creating stunning AI-generated images.",
-    category: "Creative",
-    duration: "22 min",
-    difficulty: "Medium",
-    views: "89K",
-    rating: 4.8,
-    tags: ["midjourney", "prompts", "creative"]
+    title: "These 13 AI Tools Will Save You 1,000 Hours in 2025",
+    description: "Discover 13 powerful AI tools that will dramatically boost your productivity and save time.",
+    category: "Business",
+    duration: "38 min",
+    difficulty: "Easy",
+    views: "520K",
+    rating: 4.7,
+    tags: ["productivity", "time-saving", "tools"],
+    url: "https://www.youtube.com/watch?v=upDOltxNRqQ"
   },
   {
     id: "3",
-    title: "Automating Email Responses with AI",
-    description: "Set up AI-powered email automation to save time and improve customer service.",
-    category: "Business",
-    duration: "18 min",
-    difficulty: "Medium",
-    views: "67K",
-    rating: 4.6,
-    tags: ["automation", "email", "customer-service"]
+    title: "AI Tools EXPLAINED: How to Use Them? (2025 Guide for Beginners)",
+    description: "Complete beginner's guide to understanding and using AI tools in 2025.",
+    category: "Beginner",
+    duration: "32 min",
+    difficulty: "Easy",
+    views: "430K",
+    rating: 4.9,
+    tags: ["beginner", "tutorial", "guide"],
+    url: "https://www.youtube.com/watch?v=yHk7Vavmc7Q"
   },
   {
     id: "4",
-    title: "Advanced GitHub Copilot Techniques",
-    description: "Master advanced features of GitHub Copilot for more efficient coding.",
-    category: "Development",
-    duration: "25 min",
-    difficulty: "Hard",
-    views: "45K",
+    title: "I Tested 50+ AI Tools — These are the TOP 6 for Content Creators",
+    description: "In-depth testing and review of over 50 AI tools to find the best ones for content creation.",
+    category: "Content",
+    duration: "28 min",
+    difficulty: "Medium",
+    views: "680K",
+    rating: 4.8,
+    tags: ["content-creation", "review", "comparison"],
+    url: "https://www.youtube.com/watch?v=-dvMJ938MIQ"
+  },
+  {
+    id: "5",
+    title: "Best AI Tools' Tutorials (Playlist)",
+    description: "A comprehensive playlist featuring tutorials for the best AI tools available.",
+    category: "General",
+    duration: "Multiple",
+    difficulty: "Easy",
+    views: "1.2M",
     rating: 4.9,
-    tags: ["github-copilot", "coding", "development"]
+    tags: ["playlist", "tutorials", "comprehensive"],
+    url: "https://www.youtube.com/playlist?list=PLuAO0mHCC-OUn_vz17JoiodwroZUCVhAy"
+  },
+  {
+    id: "6",
+    title: "7 Best AI Tools You NEED to Try in 2025",
+    description: "Essential AI tools that everyone should try in 2025 for maximum productivity.",
+    category: "General",
+    duration: "24 min",
+    difficulty: "Easy",
+    views: "390K",
+    rating: 4.7,
+    tags: ["essential", "2025", "tools"],
+    url: "https://www.youtube.com/watch?v=TZe5UqlUg0"
+  },
+  {
+    id: "7",
+    title: "8 Best AI Tools for Online Course Creation (Full Comparison)",
+    description: "Detailed comparison of the top 8 AI tools specifically for creating online courses.",
+    category: "Content",
+    duration: "35 min",
+    difficulty: "Medium",
+    views: "275K",
+    rating: 4.6,
+    tags: ["courses", "education", "comparison"],
+    url: "https://www.youtube.com/watch?v=UxlvVpQro80"
+  },
+  {
+    id: "8",
+    title: "Google's AI Course for Beginners (in 10 minutes)!",
+    description: "Quick 10-minute crash course on Google's AI technologies and tools for beginners.",
+    category: "Beginner",
+    duration: "10 min",
+    difficulty: "Easy",
+    views: "920K",
+    rating: 4.8,
+    tags: ["google", "beginner", "quick-start"],
+    url: "https://www.youtube.com/watch?v=Yq0QkCxoTHM"
+  },
+  {
+    id: "9",
+    title: "Artificial Intelligence Full Course | Tutorial For Beginners",
+    description: "Complete full-length course covering all aspects of artificial intelligence for beginners.",
+    category: "Technical",
+    duration: "5 hours",
+    difficulty: "Medium",
+    views: "3.5M",
+    rating: 4.9,
+    tags: ["full-course", "comprehensive", "beginner"],
+    url: "https://www.youtube.com/watch?v=ML9AeEYLt0E"
+  },
+  {
+    id: "10",
+    title: "5 AI Tools to Create YouTube Videos You've Never Seen Before",
+    description: "Discover unique and innovative AI tools specifically for YouTube video creation.",
+    category: "Creative",
+    duration: "22 min",
+    difficulty: "Medium",
+    views: "445K",
+    rating: 4.7,
+    tags: ["youtube", "video-creation", "creative"],
+    url: "https://www.youtube.com/watch?v=03cChsHHGy0"
+  },
+  {
+    id: "11",
+    title: "The Ultimate Guide to AI Tools: What's Worth Your Money?",
+    description: "Honest review of AI tools to help you decide which ones are worth investing in.",
+    category: "Business",
+    duration: "42 min",
+    difficulty: "Medium",
+    views: "510K",
+    rating: 4.8,
+    tags: ["review", "investment", "comparison"],
+    url: "https://www.youtube.com/watch?v=I4uHE_DhaWE"
+  },
+  {
+    id: "12",
+    title: "99% of Beginners Don't Know the Basics of AI",
+    description: "Essential AI basics that most beginners overlook but need to know to succeed.",
+    category: "Beginner",
+    duration: "18 min",
+    difficulty: "Easy",
+    views: "820K",
+    rating: 4.9,
+    tags: ["basics", "beginner", "fundamentals"],
+    url: "https://www.youtube.com/watch?v=nVyD6THcvDQ"
+  },
+  {
+    id: "13",
+    title: "This is the Best AI Tool For Content Creators (My Complete Workflow)",
+    description: "Complete workflow breakdown showcasing the best AI tool for content creation.",
+    category: "Content",
+    duration: "31 min",
+    difficulty: "Medium",
+    views: "590K",
+    rating: 4.8,
+    tags: ["workflow", "content-creation", "tutorial"],
+    url: "https://www.youtube.com/watch?v=V5ych2rxtnQ"
+  },
+  {
+    id: "14",
+    title: "Top 50 AI Apps Explained in One Video",
+    description: "Comprehensive overview of 50 top AI applications all explained in a single video.",
+    category: "General",
+    duration: "55 min",
+    difficulty: "Easy",
+    views: "1.1M",
+    rating: 4.9,
+    tags: ["overview", "comprehensive", "apps"],
+    url: "https://www.youtube.com/watch?v=3HFQsCHxtUw"
+  },
+  {
+    id: "15",
+    title: "AI Tools You'll Use Everyday (And How To Use Them)",
+    description: "Practical guide to everyday AI tools and step-by-step instructions on how to use them.",
+    category: "General",
+    duration: "26 min",
+    difficulty: "Easy",
+    views: "640K",
+    rating: 4.7,
+    tags: ["everyday", "practical", "tutorial"],
+    url: "https://www.youtube.com/watch?v=NJYBCKcb5z8"
   }
 ];
 
@@ -364,10 +501,12 @@ export const LearningAcademy = () => {
           ))}
         </div>
 
-        <Button className="w-full">
-          <Play className="h-4 w-4 mr-2" />
-          Watch Tutorial
-        </Button>
+        <a href={tutorial.url} target="_blank" rel="noopener noreferrer" className="block">
+          <Button className="w-full">
+            <Play className="h-4 w-4 mr-2" />
+            Watch Tutorial
+          </Button>
+        </a>
       </CardContent>
     </Card>
   );
