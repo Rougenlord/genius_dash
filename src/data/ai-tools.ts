@@ -18,52 +18,6 @@ export interface AITool {
 export const aiTools: AITool[] = [
   // Chatbots & Conversational AI
   {
-    id: "1",
-    name: "ChatGPT",
-    description: "Advanced AI chatbot for conversations, writing, coding, and problem-solving across various domains with natural language understanding.",
-    category: "Chatbots",
-    subcategory: "General Purpose",
-    rating: 4.8,
-    price: "Freemium",
-    url: "https://chatgpt.com",
-    featured: true,
-    trending: true,
-    popular: true,
-    tags: ["conversational", "writing", "coding", "analysis"],
-    launchDate: "2022-11",
-    monthlyVisits: "1.8B"
-  },
-  {
-    id: "2",
-    name: "Claude",
-    description: "Anthropic's AI assistant focused on being helpful, harmless, and honest. Excellent for analysis, writing, and reasoning tasks.",
-    category: "Chatbots",
-    subcategory: "General Purpose",
-    rating: 4.7,
-    price: "Freemium",
-    url: "https://claude.ai",
-    featured: true,
-    trending: true,
-    tags: ["analysis", "writing", "reasoning", "safety"],
-    launchDate: "2023-07",
-    monthlyVisits: "85M"
-  },
-  {
-    id: "3",
-    name: "Gemini",
-    description: "Google's most capable AI model with multimodal understanding, integrated with Google services for enhanced productivity.",
-    category: "Chatbots",
-    subcategory: "General Purpose",
-    rating: 4.6,
-    price: "Freemium",
-    url: "https://gemini.google.com",
-    featured: true,
-    trending: true,
-    tags: ["multimodal", "google", "productivity", "search"],
-    launchDate: "2023-12",
-    monthlyVisits: "142M"
-  },
-  {
     id: "4",
     name: "Character.AI",
     description: "Create and chat with AI characters, each with unique personalities, backgrounds, and conversation styles.",

@@ -6,7 +6,6 @@ import { CategoryFilter } from "@/components/sections/category-filter";
 import { ToolsGrid } from "@/components/sections/tools-grid";
 import { FeaturedTools } from "@/components/sections/featured-tools";
 import { PersonalizedRecommendations } from "@/components/sections/personalized-recommendations";
-import { Stats } from "@/components/sections/stats";
 import { SubmitTool } from "@/components/forms/submit-tool";
 import { SortFilter } from "@/components/ui/sort-filter";
 import { Chatbot } from "@/components/chatbot/chatbot";
@@ -128,8 +127,6 @@ const Index = () => {
       <Hero />
       
       {user ? <PersonalizedRecommendations /> : <FeaturedTools tools={aiTools} />}
-      
-      <Stats />
       
       <div className="category-filter">
         <CategoryFilter 
