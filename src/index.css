@@ -6,45 +6,45 @@
 
 @layer base {
   :root {
-    --background: 220 26% 8%;
-    --foreground: 210 40% 98%;
+    --background: 20 30% 10%;
+    --foreground: 30 20% 92%;
 
-    --card: 220 26% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 18 28% 14%;
+    --card-foreground: 30 20% 92%;
 
-    --popover: 220 26% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 18 28% 14%;
+    --popover-foreground: 30 20% 92%;
 
-    --primary: 239 84% 67%;
-    --primary-foreground: 220 26% 8%;
+    --primary: 14 80% 58%;
+    --primary-foreground: 20 30% 10%;
 
-    --secondary: 220 26% 15%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 20 25% 18%;
+    --secondary-foreground: 30 20% 92%;
 
-    --muted: 220 26% 15%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 20 20% 18%;
+    --muted-foreground: 20 15% 60%;
 
-    --accent: 264 83% 69%;
-    --accent-foreground: 220 26% 8%;
+    --accent: 350 65% 62%;
+    --accent-foreground: 20 30% 10%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 30 20% 92%;
 
-    --border: 220 26% 18%;
-    --input: 220 26% 15%;
-    --ring: 239 84% 67%;
+    --border: 20 22% 20%;
+    --input: 20 25% 16%;
+    --ring: 14 80% 58%;
 
     --radius: 0.75rem;
 
-    /* Custom gradients for TAAFT style */
-    --gradient-hero: linear-gradient(135deg, hsl(239 84% 67%) 0%, hsl(264 83% 69%) 50%, hsl(300 80% 65%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(220 26% 12%) 0%, hsl(220 26% 14%) 100%);
-    --gradient-button: linear-gradient(145deg, hsl(14 83% 60%) 0%, hsl(14 90% 65%) 100%);
+    /* Custom gradients - flesh tint palette */
+    --gradient-hero: linear-gradient(135deg, hsl(14 80% 58%) 0%, hsl(350 65% 62%) 50%, hsl(330 55% 58%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(18 28% 14%) 0%, hsl(18 28% 16%) 100%);
+    --gradient-button: linear-gradient(145deg, hsl(14 80% 58%) 0%, hsl(14 85% 63%) 100%);
     
-    /* Shadows with gradient colors */
-    --shadow-glow: 0 0 40px hsl(239 84% 67% / 0.3);
-    --shadow-card: 0 8px 32px hsl(220 26% 4% / 0.5);
-    --shadow-button: 0 4px 20px hsl(14 83% 60% / 0.4);
+    /* Shadows with flesh tint colors */
+    --shadow-glow: 0 0 40px hsl(14 80% 58% / 0.3);
+    --shadow-card: 0 8px 32px hsl(20 30% 4% / 0.5);
+    --shadow-button: 0 4px 20px hsl(14 80% 58% / 0.4);
 
     /* Animation variables */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -67,9 +67,8 @@
   }
 
   .dark {
-    /* Dark mode uses same colors as we're defaulting to dark theme */
-    --background: 220 26% 8%;
-    --foreground: 210 40% 98%;
+    --background: 20 30% 10%;
+    --foreground: 30 20% 92%;
   }
 }
 
